@@ -1,0 +1,25 @@
+.attention{
+    font-family: 'Philosopher', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: red;
+    color: beige;
+}
+
+.flexContainer{
+    composes: spaceBetween from '@/styles/utils.module.css';
+}
+
+/*.pageheader {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}*/

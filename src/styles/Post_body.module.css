@@ -1,0 +1,31 @@
+.stack > * + * {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    margin-top: var(--stack-space, 1.5em);
+}
+
+.stack h2,
+.stack h3 {
+    --stack-space: 2em;
+}
+
+.stack h2 + *,
+.stack h3 + *{
+    --stack-space: 0.8em;
+}
+
+.stack p{
+    line-height: 1.8;
+}
+
+.stack ul{
+    padding: revert;
+    list-style: revert;
+}
+
+.stack a {
+    color: var(--gray-75);
+	transition:all .3s;
+}
+.stack a:hover {
+    color: var(--accent);
+}

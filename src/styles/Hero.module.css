@@ -1,0 +1,24 @@
+.flexContainer{
+    composes: spaceBetween from '@/styles/utils.module.css';
+    align-items: center;
+    text-align: center;
+}
+
+.text{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    padding-top: calc(var(--display) * 0.5);
+    padding-bottom: calc(var(--display) * 0.7);
+    color: darkblue;
+    align-items: center;
+    text-align: center;
+}
+
+.title{
+    font-size: var(--display);
+    font-weight: 900;
+    letter-spacing: 0.15em;
+}
+
+.subtitle{
+    font-size: var(--small-heading2);
+}

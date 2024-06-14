@@ -1,0 +1,72 @@
+.mainnav {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    text-align: center;
+}
+
+.mainnav ul{
+    font-size: 1.25rem;
+    margin-top: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainnav ul li {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 1rem;
+	position: relative;
+	border-left: 1px solid var(--gray-50);		/* 親メニューの区切り線（左） */
+}
+
+.mainnav a {
+    color: var(--gray-75);
+	transition:all .3s;
+}
+.mainnav a:hover {
+    color: var(--accent);
+}
+
+.mainnav ul li.child::before{				/* 親メニュー（子メニューあり）の下矢印 */
+	content: '';
+	position: absolute;
+	left: 15px;
+	top: 22px;
+	width: 6px;
+	height: 6px;
+	border-top:  2px var(--white) solid;
+	border-right: 2px var(--white) solid;
+	transform: rotate(135deg);
+}
+
+.mainnav ul li ul {
+	display: none;
+	width: 75px;
+	position: absolute;
+	left: -120px;							/* 子メーの横位置（親メニューの左部から） */
+	top: -10px;							/* 子メニューの縦位置（親メニューの上部から） */
+	z-index: 4;
+	transition: all .3s;
+}
+.mainnav ul li.child:hover > ul,
+.mainnav ul li.child ul li:hover > ul,
+.mainnav ul li.child:active > ul,
+.mainnav ul li.child ul li:active > ul {
+	display: block;
+}
+.mainnav ul li ul li {
+    width: 800%;
+	background: var(--gray-50);					/* 子メニューの背景色 */
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px var(--white) solid;		/* 子メニュー・孫メニューの区切り線（下） */
+}
+.mainnav ul li ul li:last-child {
+	border-right: none;
+}
+.mainnav ul li ul li a {
+	color: var(--white);						/* 子メニューの文字色 */
+}
